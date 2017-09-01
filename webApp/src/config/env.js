@@ -22,7 +22,7 @@ if (process.env.NODE_ENV == 'development') {
 	baseUrl = '/yzlpms/';
   	loginUrl =  '/web/login';
     registerUrl =  '/web/register';
-	routerMode = '/history'
+	routerMode = 'history'
 }
 
 export {
