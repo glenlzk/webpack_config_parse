@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<div id='demo'>
+
+		</div>
+		<script type="text/javascript">
+			var getQueryString = function(name) { 
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+				var r = window.location.search.substr(1).match(reg); 
+				if (r != null) return unescape(r[2]); return null; 
+			}
+			var p = getQueryString('p');
+			if(p){
+				window.location = './#/keydetail?p=' + p; 
+			}
+			var o = getQueryString('o');
+			if(o){
+				window.location = 'http://localhost:8088/#/ordersuccessdetail?orderId=' + o; 
+			}
+		</script>
+	</body>
+</html>
